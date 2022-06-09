@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -58,6 +59,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
     //Koil image download (аналог Picasso и Glide, написанный на Kotlin)
-    implementation("io.coil-kt:coil:2.1.0")
+    implementation "io.coil-kt:coil:2.1.0"
+    //interceptor
+    kapt 'com.squareup.okhttp3:logging-interceptor:4.9.3'
 
 }
