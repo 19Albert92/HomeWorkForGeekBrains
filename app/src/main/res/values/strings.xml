@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Home Work For GeekBrains</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_item_menu_title">Search</string>
+
+    <string name="search_text_hint">Введите слово или предложение для поиска…</string>
+    <string name="error_text_to_response">К сожалению что то пошло не так. Попробуйте позже!</string>
+    <string name="content_description_image_to_day">Картинка на сегодня</string>
+
+    <string name="cheep_text_1">Сегодняшняя</string>
+    <string name="cheep_text_2">Вчерашняя</string>
+    <string name="cheep_text_3">Позавчеравтра</string>
 </resources>

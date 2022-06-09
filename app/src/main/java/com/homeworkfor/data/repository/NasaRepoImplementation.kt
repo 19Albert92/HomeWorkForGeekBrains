@@ -7,8 +7,13 @@ import retrofit2.Response
 
 class NasaRepoImplementation() : NasaRepo {
 
-    /*TODO функция по возаращению фото дня*/
-    override fun getPictureOfTheDay(): Response<NasaResponseModel> {
+    /*TODO функция по возаращению данные на сегодняшний день*/
+    override suspend fun getPictureOfTheDay(): Response<NasaResponseModel> {
         return NasaRetrofitInstance.retrofitInstance().getPictureOfTheDay()
+    }
+
+    /*TODO функция по возаращению данных на остальные дни*/
+    override suspend fun getPicturesOtherDay(date: String): Response<NasaResponseModel> {
+        return NasaRetrofitInstance.retrofitInstance().getPicturesOtherDay(date = date)
     }
 }

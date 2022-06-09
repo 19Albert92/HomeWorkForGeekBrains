@@ -8,7 +8,13 @@ import retrofit2.http.Query
 
 interface NasaApi {
     @GET("planetary/apod?")
-    fun getPictureOfTheDay(
+    suspend fun getPictureOfTheDay(
+        @Query("api_key") apiKey: String = BuildConfig.NASA_API_KEY
+    ): Response<NasaResponseModel>
+
+    @GET("planetary/apod?")
+    suspend fun getPicturesOtherDay(
+        @Query("date") date: String,
         @Query("api_key") apiKey: String = BuildConfig.NASA_API_KEY
     ): Response<NasaResponseModel>
 }
