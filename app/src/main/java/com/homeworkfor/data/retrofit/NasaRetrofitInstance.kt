@@ -24,7 +24,7 @@ object NasaRetrofitInstance {
             .build()
     }
 
-    val retrofitInstance = {
-        retrofit().create(NasaApi::class.java)
+    fun retrofitInstance(): NasaApi {
+        return retrofit().create(NasaApi::class.java)
     }
 }
