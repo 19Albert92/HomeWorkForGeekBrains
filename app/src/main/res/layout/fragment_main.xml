@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/default_constraint_layout">
+
+    <LinearLayout
+        style="@style/default_constraint_layout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/search_view_layout"
+            style="@style/search_view_layout">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_ed_search"
+                style="@style/layout_input_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_search"
+                    style="@style/input_search" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            style="@style/cheep_items_group"
+            android:id="@+id/group_cheep_layout">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cheep_1"
+                android:checked="true"
+                style="@style/cheep_items"
+                android:text="@string/cheep_text_1" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cheep_2"
+                style="@style/cheep_items"
+                android:text="@string/cheep_text_2" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cheep_3"
+                style="@style/cheep_items"
+                android:text="@string/cheep_text_3" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.homeworkfor.utils.ImageForToDay
+            android:id="@+id/image_view"
+            style="@style/ImageForToDay" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/include_progress"
+        layout="@layout/progress_layout"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/bottom_sheet_layout"
+        layout="@layout/bottom_information_sheet_fragment" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
